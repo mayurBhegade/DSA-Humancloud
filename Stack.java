@@ -3,7 +3,7 @@ package Demo;
 
 public class Stack 
 {
-	    int stack [] = new int [10];
+	    int stack [] = new int [5];
 	    int top = 0;
 		void push(int data)
 		{

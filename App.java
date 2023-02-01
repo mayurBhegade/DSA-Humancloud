@@ -61,7 +61,8 @@ public class App
 								System.out.println("Stack is empty : "+stk.isEmpty());
 								break;
 								
-						case 7 :
+						case 7 :					   	    	        
+							    System.out.println("Thank u...!");
 							    System.exit(0);
 							    break;
 								
@@ -69,11 +70,11 @@ public class App
 								 System.out.println("Wrong choice...");
 								 
 						}
-						System.out.println("\n Do you want to continue...");
+						System.out.println("\n Do you want to continue...please press 1");
 						
 					}
 						while(sc1.nextInt()==1);
-					
+					        break;
 						
 						case 2 :
 							Queue qq = new Queue();
@@ -118,6 +119,7 @@ public class App
 				   						break;
 				   						
 				   				case 7 :
+				   	    	            System.out.println("Thank u...!");
 				   						System.exit(0);
 				   						break;
 				   						
@@ -126,13 +128,11 @@ public class App
 				   		    	   		break;
 				   				
 				   				}
-				   				System.out.println("\n Do you want to continue...");
+				   				System.out.println("\n Do you want to continue...please press 1");
 				   				
 				   			}
 				   				while(sc11.nextInt()==1);
-				   		
-				   			
-				   			
+				   		      	break;
 				   				
 				   	      case 3 :
 				   	    	      LLDemo  LL = new LLDemo();
@@ -175,7 +175,8 @@ public class App
 				   					   break;
 				   			
 				   				case 6 :
-				   						System.exit(0);
+					   	    	        System.out.println("Thank u...!");
+					   	    	        System.exit(0);
 				   						break;
 				   						
 				   		       default :			
@@ -183,13 +184,16 @@ public class App
 				   		    	   		break;
 				   				
 				   				}
-				   				System.out.println("\n Do you want to continue...");
+				   				System.out.println("\n Do you want to continue...please press 1");
 				   				
 				   			}
 				   				while(sc12.nextInt()==1);
+				   			
+				   			    break;
 				   		
-				   	     case 4 :
-	   						    System.exit(0);
+				   	     case 4 :	   						   
+				   	    	    System.out.println("Thank u...!");
+				   	    	    System.exit(0);
 	   						    break;
 							    
 					 default :			
@@ -198,7 +202,7 @@ public class App
 
 							
 				}		
-				 System.out.println("Do you want to Continue...");
+				 System.out.println("Do you want to Continue...please press 1");
 						
 					
 					
