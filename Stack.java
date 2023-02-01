@@ -7,7 +7,7 @@ public class Stack
 	    int top = 0;
 		void push(int data)
 		{
-			if (top==10)
+			if (top==5)
 			{
 				System.out.println("Stack is full");
 			}
