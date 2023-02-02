@@ -119,8 +119,13 @@ public class App
 				   						break;
 				   						
 				   				case 7 :
-				   	    	            System.out.println("Thank u...!");
-				   						System.exit(0);
+				   	    	            System.out.println("Go to the main menu....press 1 ");
+				   	    	            
+				   	    	              while(sc11.nextInt()==1)
+				   	    	              {
+				   	    	               break;
+				   	    	              }
+				   	    	            
 				   						break;
 				   						
 				   		       default :			
