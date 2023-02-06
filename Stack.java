@@ -1,5 +1,6 @@
 package Demo;
 
+import java.util.InputMismatchException;
 
 public class Stack 
 {
@@ -7,15 +8,17 @@ public class Stack
 	    int top = 0;
 		void push(int data)
 		{
-			if (top==5)
-			{
-				System.out.println("Stack is full");
-			}
-			else
-			{
-				stack[top] = data;
-				top++;
-			}
+			
+				try
+				{
+					stack[top] = data;
+					top++;
+				}
+				catch (ArrayIndexOutOfBoundsException e)
+				{
+					System.out.println("Warning : Stack is full");
+				}
+				
 		}
 		void show()
 		{
@@ -29,15 +32,14 @@ public class Stack
 			
 			int data = 0;
 
-			if(isEmpty())
+			try {
+				top--;
+				data = stack[top];
+				stack[top]=0;
+		     	}
+			catch(Exception e)
 			{
-				System.out.println("stack is Empty");
-			}
-			else
-			{
-			top--;
-			data = stack[top];
-			stack[top]=0;
+				System.out.println("Warning : Stack in Empty");
 			}
 			return data;
 			
@@ -58,5 +60,5 @@ public class Stack
 		{
 			return top<=0;
 		}
-		
-}
+	
+}	

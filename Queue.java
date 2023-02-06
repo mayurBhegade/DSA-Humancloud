@@ -3,6 +3,7 @@ package Demo;
 
 public class Queue
 {
+	
 		int Queue [] = new int[5];
 		int front;
 		int rear;
@@ -10,16 +11,18 @@ public class Queue
 		
 		void enqueue(int data)
 		{
-			if(!isFull())
-			{
+			
+		    try 
+		       {
 				Queue[rear] = data;
 				rear++;
 				size++;
-			}
-			else
-			{
-				System.out.println("Queue is full...");
-			}
+		       }
+		     catch (ArrayIndexOutOfBoundsException e)
+		    {
+		    	 System.out.println("Queue is full");
+		    }
+			
 		}
 		void show()
 		{
@@ -32,15 +35,15 @@ public class Queue
 		int dequeue()
 		{
 			int data = Queue[front];
-			if(isEmpty())
+			try {
+				  front ++;
+				  size --;
+			  }
+			catch(Exception e)
 			{
-				System.out.println("Queue is Empty...");
-				
-			}else
-			{
-				front ++;
-				size --;
+				System.out.println("Queue is Empty");
 			}
+			
 			return data;
 			
 		}

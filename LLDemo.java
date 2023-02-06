@@ -1,15 +1,7 @@
 
 package Demo;
 
-public class Node
-{
-	int data;
-	Node next;
-	
-}
-
-
-class LLDemo
+public class LLDemo
 {
 	Node head;
 	
@@ -95,5 +87,27 @@ class LLDemo
 			n1 = n.next;
 			n.next=n1.next;
 		}
+	}
+	
+	
+	 class Node
+	 {
+	 	int data;
+	 	Node next;
+	 		
+	 }
+	
+	
+	public static void main(String[] args) {
+		
+		LLDemo LL = new LLDemo();
+			LL.Insert(10);
+			LL.Insert(20);
+			LL.Insert(30);
+			LL.Insert(40);
+		
+			LL.show();
+
+			
 	}
 }

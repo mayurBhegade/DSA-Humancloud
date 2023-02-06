@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class BinarySearch 
 {
 
-	static Node1 create()
+	static Node create()
 	{
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the values : ");
@@ -15,7 +15,7 @@ public class BinarySearch
 			return null;
 		
 		}
-		    Node1 root = new Node1(data);
+		    Node root = new Node(data);
 			System.out.println("Enter left child of "+root.data);
 			root.left=create();
 			System.out.println("Enter right child of "+root.data);
@@ -26,7 +26,7 @@ public class BinarySearch
 	}
 	
 	
-	static void Inorder(Node1 root)
+	static void Inorder(Node root)
 	{
 		if(root==null)
 			return;
@@ -35,7 +35,7 @@ public class BinarySearch
 		Inorder(root.right);	
 	}
 	
-	static void Preorder(Node1 root)
+	static void Preorder(Node root)
 	{	
 		if(root==null)
 			return;
@@ -44,7 +44,7 @@ public class BinarySearch
 		Preorder(root.right);
 	}
 	
-	static void Postorder(Node1 root)
+	static void Postorder(Node root)
 	{	
 		if(root==null)
 			return;
@@ -57,7 +57,7 @@ public class BinarySearch
 	
 	public static void main(String[] args)
 	{
-		Node1 root=create();
+		Node root=create();
 		Inorder(root);
 		System.out.println();
 		Preorder(root);
@@ -67,16 +67,17 @@ public class BinarySearch
        		
 	}
 	
+	
 }
 
 
-class Node1
+class Node
 {
-	Node1 left;
-	Node1 right;
+	Node left;
+	Node right;
 	int data;
 	
-	Node1(int data)
+	Node(int data)
 	{
 		this.data=data;
 		left=null;
